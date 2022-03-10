@@ -1,0 +1,64 @@
+.content {
+  margin-top: 50px;
+}
+
+.section-film-header {
+  border-top: 2px solid #efc72a;
+  background-color: #282828;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.section-file-header-title {
+  display: flex;
+  align-items: center;
+  color: #fa7237;
+  font-size: 15px;
+}
+
+.section-file-header-title .icon {
+  margin-right: 5px;
+}
+
+.section-film-header .view-all {
+  font-weight: bold;
+  color: #efc72a;
+}
+
+.section-film-header .view-all:hover {
+  text-decoration: underline!important;
+}
+
+.section-film-content .film-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section-film-content .file-item {
+  flex: 0 0 24.5%;
+  max-width: 24.5%;
+  margin-bottom: 20px;
+}
+
+.section-film-content .file-item .name {
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.section-film-content .file-item .name-vi {
+  color: #efc72a;
+}
+
+.section-film-content .file-item .name-en {
+  color: #ffff;
+}
+
+.section-film-content .file-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

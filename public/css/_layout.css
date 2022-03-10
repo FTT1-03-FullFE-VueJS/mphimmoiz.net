@@ -1,0 +1,45 @@
+/* Css Header */
+.header {
+  border-bottom: 2px solid #fc7337;
+  padding: 10px;
+}
+
+.header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .header-logo-image {
+  width: 230px;
+  height: auto;
+}
+
+.header .header-form-search-input {
+  background-color: #403f3f;
+  border: none;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.header .header-form {
+  position: relative;
+}
+
+.header .header-form-search-button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(0, -50%);
+}
+
+.header .header-form-search-button i {
+  color: #c22d4d;
+  font-size: 17px;
+}
+
+/* Css Footer */

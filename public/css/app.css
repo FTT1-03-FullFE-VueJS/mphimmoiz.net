@@ -1,0 +1,11 @@
+@import "./_reset.css";
+@import "./_global.css";
+@import "./_layout.css";
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1a1a1a;
+  box-sizing: content-box;
+}
