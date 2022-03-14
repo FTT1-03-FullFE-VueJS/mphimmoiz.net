@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../public/css/pages/auth/login.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="auth-login">
+    <h2>Login Form</h2>
+
+    <form action="/action_page.php" method="post">
+      <div class="container">
+        <label for="uname"><b>Tên đăng nhập</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Mật khẩu</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Đăng nhập</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Ghi nhớ đăng nhập
+        </label>
+      </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Hủy</button>
+        <span class="psw">Quên <a href="#">mật khẩu?</a></span>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
