@@ -11,26 +11,32 @@
   <div class="auth-login">
     <h2>Register Form</h2>
 
-    <form action="/action_page.php" method="post">
+    <form method="post">
       <div class="container">
         <label for="uname"><b>Tên đăng nhập</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input class="formInput usernameInput" type="text" placeholder="Enter Username" name="uname">
+        <div class="error error-username"></div>
 
         <label for="uname"><b>Email</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input class="formInput emailInput" type="text" placeholder="Enter Email" name="uname">
+        <div class="error error-email"></div>
 
         <label for="uname"><b>Phone</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input class="formInput phoneInput" type="text" placeholder="Enter Phone" name="uname">
 
         <label for="psw"><b>Mật khẩu</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input class="formInput passwordInput" type="password" placeholder="Enter Password" name="psw">
 
         <label for="psw"><b>Xác nhận mật khẩu</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input class="formInput confirmPasswordInput" type="password" placeholder="Enter Confirm Password" name="psw">
 
-        <button type="submit">Đăng ký</button>
+        <a href="">Hiển mật khẩu</a>
+
+        <button type="submit" id="btnRegister">Đăng ký</button>
       </div>
     </form>
   </div>
+  <!-- Javascripts -->
+  <script src="../../public/js/pages/auth/register.js"></script>
 </body>
 </html>

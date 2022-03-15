@@ -1,0 +1,8 @@
+1. Authentication
+-> Register -> Login -> Forgot password( confirm-email -> reset-password )
+
+Flow 1: Register -> Store LocalStorage -> Login -> Check account
+                                                      true  -> vao trang website
+                                                      false -> thong bao loi
+
+Flow 2:
