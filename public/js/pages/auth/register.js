@@ -55,6 +55,9 @@ function loginHandler() {
 function validateForm(form) {
   const $usernameErrorDom = document.querySelector('.error-username');
   const $emailErrorDom = document.querySelector('.error-email');
+  const $phoneErrorDom = document.querySelector('.error-phone');
+  const $passwordErrorDom = document.querySelector('.error-password');
+  const $confirmPasswordErrorDom = document.querySelector('.error-confirmPassword');
   let formIsValid = false;
 
   /**
@@ -106,12 +109,43 @@ function validateForm(form) {
    * - 1: phone input đã nhập chưa
    * - 2: phone input có hợp lệ không:
    */
+  if(form.phone.trim().length === 0) {
+    // Phone chưa được nhập
+    $phoneErrorDom.innerText = 'Vui lòng nhập phone';
+    $phoneErrorDom.style.display = 'block';
+  } else {
+    // Phone đã được nhập
+    let regexPhone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (regexPhone.test(form.phone) === true) {
+      $phoneErrorDom.innerText = '';
+      $phoneErrorDom.style.display = 'none';
+    } else {
+      $phoneErrorDom.innerText = 'Phone không hợp lệ';
+      $phoneErrorDom.style.display = 'block';
+    }
+  }
 
   /**
    * Check validate password input
    * - 1: password input đã nhập chưa
    * - 2: password phải có số ký tự lơn hơn hoặc bằng 10
    */
+  if (form.password.trim().length === 0) {
+    // Password chưa được nhập
+    $passwordErrorDom.innerText = 'Vui lòng nhập password';
+    $passwordErrorDom.style.display = 'block';
+  } else {
+    // Password đã được nhập
+    if (form.password.length >= 10) {
+      // dung
+      $passwordErrorDom.innerText = '';
+      $passwordErrorDom.style.display = 'none';
+    } else {
+      // sai
+      $passwordErrorDom.innerText = 'Bạn phải nhập mật khẩu có số ký tự >= 10';
+      $passwordErrorDom.style.display = 'block';
+    }
+  }
 
   /**
    * Check validate confirmPassword input
@@ -119,6 +153,28 @@ function validateForm(form) {
    * - 2: confirmPassword phải có số ký tự lơn hơn hoặc bằng 10
    * - 3: confirmPassword có giống với password khồng
    */
+  if (form.confirmPassword.trim().length === 0) {
+    // ConfirmPassword chưa được nhập
+    $confirmPasswordErrorDom.innerText = 'Vui lòng nhập confirmPassword';
+    $confirmPasswordErrorDom.style.display = 'block';
+  } else {
+    // ConfirmPassword đã được nhập
+    if (form.confirmPassword.length >= 10) {
+      if (form.password === form.confirmPassword) {
+        // dung
+        $confirmPasswordErrorDom.innerText = '';
+        $confirmPasswordErrorDom.style.display = 'none';
+      } else {
+        // sai
+        $confirmPasswordErrorDom.innerText = 'Bạn phải nhập confirmPassword giống với password';
+        $confirmPasswordErrorDom.style.display = 'block';
+      }
+    } else {
+      // sai
+      $confirmPasswordErrorDom.innerText = 'Bạn phải nhập confirmPassword có số ký tự >= 10';
+      $confirmPasswordErrorDom.style.display = 'block';
+    }
+  }
 
   return formIsValid;
 }
